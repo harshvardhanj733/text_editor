@@ -12,7 +12,7 @@ function App() {
   let [textColorSuccess, setTextColorSuccess] = useState("success");
   let [textColorPrimary, setTextColorPrimary] = useState("primary");
   let [textColorDark, setTextColorDark] = useState("dark");
-  let [textColorWarning, setTextWarning] = useState("warning");
+  let [textColorWarning, setTextColorWarning] = useState("warning");
   let [textColorWhite, setTextColorWhite] = useState("white");
   let [textColorInfo, setTextColorInfo] = useState("info");
 
@@ -43,11 +43,33 @@ function App() {
       document.body.style.backgroundColor = "white";
     }
   }
+  let toggleGreenMode = ()=>{
+    if(mode!=="green"){
+      setMode("green");
+      setBgLight("success");
+      setTextColorSuccess("dark");
+      setTextColorInfo("dark");
+      setTextColorWarning("success");
+      setTextColorPrimary("dark");
+      setTextColorDanger("success");
+      setBgDark("success");
+      document.body.style.backgroundColor = "white";
+    }
+    else{
+      toggleDarkMode();
+      // toggleDarkMode();
+      setTextColorInfo("info");
+      setTextColorWarning("warning");
+      setTextColorPrimary("primary");
+      setTextColorDanger("danger");
+    }
+  }
   return (
     <>
       <Navbar title={title}
         mode = {mode}
         toggleDarkMode={toggleDarkMode}
+        toggleGreenMode = {toggleGreenMode}
         textColorDanger={textColorDanger}
         textColorDark={textColorDark}
         textColorInfo={textColorInfo}

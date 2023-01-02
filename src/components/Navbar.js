@@ -30,7 +30,7 @@ export default function Navbar(props) {
               </a>
             </div>
           </div>
-          <button className={`badge badge-success bg-${props.textColorSuccess} mx-3`}>Green Mode</button>
+          <button className={`badge badge-success bg-${props.textColorSuccess} mx-3`} onClick={props.toggleGreenMode}>Green Mode</button>
           <div className="form-check form-switch">
             <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked checked"/>
             <label className={`form-check-label text-${props.textColorDark}`} htmlFor="flexSwitchCheckChecked" onClick={props.toggleDarkMode}>{props.mode} mode</label>
