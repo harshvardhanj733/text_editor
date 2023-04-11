@@ -5,7 +5,7 @@ import TextForm from './components/TextForm';
 import React, { useState } from 'react';
 
 function App() {
-  let title = "Text Utility";
+  let title = "Text Editor";
 
   //setting the colors of all the texts
   let [textColorDanger, setTextColorDanger] = useState("danger");
