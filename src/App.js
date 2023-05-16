@@ -13,15 +13,15 @@ function App() {
   let [textColorPrimary, setTextColorPrimary] = useState("primary");
   let [textColorDark, setTextColorDark] = useState("dark");
   let [textColorWarning, setTextColorWarning] = useState("warning");
-  let [textColorWhite, setTextColorWhite] = useState("white");
+  let [textColorWhite] = useState("white");
   let [textColorInfo, setTextColorInfo] = useState("info");
 
   //setting the color of all the backgrounds
   let [bgDark, setBgDark] = useState("dark");
   let [bgLight, setBgLight] = useState("light");
-  let [bgWhite, setBgWhite] = useState("white");
-  let [bgRed, setBgRed] = useState("red");
-  let [bgGreen, setBgGreen] = useState("green");
+  let [bgWhite] = useState("white");
+  let [bgRed] = useState("red");
+  let [bgGreen] = useState("green");
 
   //making a dark mode function
   let [mode, setMode] = useState("light");
@@ -64,6 +64,7 @@ function App() {
       setTextColorDanger("danger");
     }
   }
+
   return (
     <>
       <Navbar title={title}
